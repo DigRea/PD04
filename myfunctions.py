@@ -12,7 +12,7 @@ def simple_separator():
     Функция создает красивый резделитель из 10-и звездочек (**********)
     :return: **********
     """
-    pass
+    return '**********'
 
 
 print(simple_separator() == '**********')  # True
@@ -24,7 +24,7 @@ def long_separator(count):
     :param count: количество звездочек
     :return: строка разделитель, примеры использования ниже
     """
-    pass
+    return '*' * count
 
 
 print(long_separator(3) == '***')  # True
@@ -38,7 +38,7 @@ def separator(simbol, count):
     :param count: количество повторений
     :return: строка разделитель примеры использования ниже
     """
-    pass
+    return simbol * count
 
 
 print(separator('-', 10) == '----------')  # True
@@ -55,7 +55,11 @@ def hello_world():
     ##########
     :return: None
     """
-    pass
+    print('*' * 10)
+    print()
+    print('Hello World!')
+    print()
+    print('#' * 10)
 
 
 '''
@@ -79,7 +83,11 @@ def hello_who(who='World'):
     :param who: кого мы приветствуем, по умолчанию World
     :return: None
     """
-    pass
+    print('*' * 10)
+    print()
+    print(f'Hello {who}!')
+    print()
+    print('#' * 10)
 
 
 '''
@@ -115,8 +123,10 @@ def pow_many(power, *args):
     :param args: любое количество цифр
     :return: результат вычисления # True -> (1 + 2)**1
     """
-    pass
-
+    res = 0
+    for i in args:
+        res += i
+    return res ** power
 
 print(pow_many(1, 1, 2) == 3)  # True -> (1 + 2)**1 == 3
 print(pow_many(1, 2, 3) == 5)  # True -> (2 + 3)**1 == 5
@@ -133,7 +143,8 @@ def print_key_val(**kwargs):
     :param kwargs: любое количество именованных параметров
     :return: None
     """
-    pass
+    for i, j in kwargs.items():
+        print(i, ' --> ', j)
 
 
 """
@@ -158,7 +169,8 @@ def my_filter(iterable, function):
     :param function: функция фильтрации
     :return: новая отфильтрованная последовательность
     """
-    pass
+    res = list(filter(function, iterable))
+    return res
 
 
 print(my_filter([1, 2, 3, 4, 5], lambda x: x > 3) == [4, 5])  # True
