@@ -35,12 +35,12 @@
 """
 
 while True:
-    print('1. пополнение счета')
-    print('2. покупка')
-    print('3. история покупок')
-    print('4. выход')
-
-    choice = input('Выберите пункт меню')
+    print('1 - Пополнение счета')
+    print('2 - Покупка')
+    print('3 - История покупок')
+    print('4 - Выход')
+    print()
+    choice = input('Выберите пункт меню: ')
     if choice == '1':
         pass
     elif choice == '2':
@@ -51,3 +51,4 @@ while True:
         break
     else:
         print('Неверный пункт меню')
+        print()
